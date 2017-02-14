@@ -1,5 +1,5 @@
 {
-  "name": "mvc_design",
+  "name": "HW-14-Durkee-Burger",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "express": "^4.13.3",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
     "express-handlebars": "^2.0.1",
-    "method-override": "^2.3.5",
-    "mysql": "^2.10.2"
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0"
   },
   "devDependencies": {
     "handlebars-helper-css": "^0.1.0"
