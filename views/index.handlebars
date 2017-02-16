@@ -1,56 +1,66 @@
-<h1>Cats!</h1>
-
-<h2>Cats that are not sleepy!</h2>
+<h1>Da Burger</h1>
+<div float: left>
+<h2>Hot and ready to eat burgers</h2>
 
 <ul>
-  {{#each cats}}
-    {{#unless this.sleepy}}
+  {{#each burgers}}
+    {{#unless this.devoured}}
       <li>
-        {{this.name}}
+        {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="true">
-          <button type="submit">SLEEP TIME!</button>
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">Eat me!</button>
         </form>
 
-        {{> cats/delete-cat}}
+        
       </li>
     {{/unless}}
   {{/each}}
 </ul>
+</div>
 
-<h2>Cats that are sleepy!</h2>
+
+<div float: right>
+<h2>Devoured</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if this.sleepy}}
+  {{#each burgers}}
+    {{#if this.devoured}}
       <li>
-        {{this.name}}
+        {{this.burger_name}}
 
         <form action="/{{this.id}}?_method=PUT" method="POST">
-          <input type="hidden" name="sleepy" value="false">
+          <input type="hidden" name="devoured" value="false">
           <button type="submit">WAKE UP!</button>
         </form>
 
-        {{> cats/delete-cat}}
+        
       </li>
     {{/if}}
   {{/each}}
 </ul>
+</div>
 
-<h2>Add a Cat</h2>
+
+
+<h2>Add a Burger</h2>
 <form class="create-update-form" action="/" method="POST">
 
   <div class="form-group">
-    <label for="ca">Cat Name:</label>
+    <label for="ca">Burger Name:</label>
     <input type="text" id="ca" name="name">
   </div>
 
   <div class="form-group">
-    <label for="slee">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
+    <label for="slee">Devoured</label><br>
+    <input type="hidden" name="devoured" value="1" > Cold<br>
+    <input type="hidden" name="devoured" value="0" checked> Fresh
   </div>
 
-  <button type="submit">Add Cat</button>
+  <button type="submit">Create da Burger</button>
 </form>
+
+<!--<input type="radio" name="devoured" value="0" checked> Fresh -->
+<!--{{> burgers/delete-burger}}-->
+<!--{{> burgers/delete-burger}}-->
