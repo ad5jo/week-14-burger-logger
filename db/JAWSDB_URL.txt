@@ -1,0 +1,21 @@
+Connection String
+
+mysql://zxwbvh275wiqah35:r0q6yy196hynyoli@l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hrmr9lenb85xb7tn
+
+
+You can use your connection information to connect manually through a client such as MySQL Workbench to administer your database.
+
+Property	Value
+Host	l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+Username	zxwbvh275wiqah35
+Password	
+r0q6yy196hynyoli  Reset
+Port	3306
+
+
+SSL Certificate
+Download SSL Certificate
+
+Connection String
+
+mysql://zxwbvh275wiqah35:r0q6yy196hynyoli@l7cup2om0gngra77.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hrmr9lenb85xb7tn?sslca=rds-combined-ca-bundle.pem&ssl-verify-server-cert
