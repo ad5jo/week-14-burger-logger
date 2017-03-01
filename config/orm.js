@@ -37,6 +37,7 @@ var orm = { // was all
     });
   },
   // was create
+  // INSERT INTO burgers (burger_name, devoured, date) VALUES ('South Park Slider', false, '2017-02-01 12:13:14');
   insertOne: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
