@@ -25,6 +25,8 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log("App listening on port: " + port);
 });
+//http://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
+//.listen(process.env.PORT || 5000)
