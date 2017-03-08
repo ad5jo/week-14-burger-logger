@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 var app = express();
 
@@ -25,7 +25,7 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-app.listen(process.env.PORT || port, function() {
+app.listen(port, function() {
   console.log("App listening on port: " + port);
 });
 //http://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
